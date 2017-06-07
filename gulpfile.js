@@ -10,6 +10,19 @@ var util = require('gulp-template-util');
 var browserify = require('browserify');
 var coffeeify = require('coffeeify');
 var less = require('less');
+var pug = require('pug');
+
+function buildHtml(){
+    return es.map(function(file, cb){
+        file.contents = new Buffer(pug.renderFile(
+            file.path, { 
+                filename : file.path,
+                pretty : "    "
+            }
+        ));
+        cb(null, file);
+    });
+}
 
 function buildScript(){
     return es.map(function(file, cb){
@@ -47,6 +60,14 @@ function buildStyle(){
     });
 }
 
+function htmlTask(dest){
+    return function(){
+        return gulp.src('src/pug/**/*.pug')
+            .pipe(buildHtml())
+            .pipe(rename({extname:'.html'}))
+            .pipe(gulp.dest(dest));};    
+}
+
 function scriptTask(dest){
     return function(){
         return gulp.src('src/coffee/**/*.coffee')
@@ -66,6 +87,7 @@ function styleTask(dest){
 function cleanTask(){
     return del([
         'dist',
+        'src/**/*.html',
         'src/js',
         'src/css']);
 }
@@ -83,11 +105,13 @@ function copyHtmlTask(){
 
 gulp.task('clean', cleanTask);
 
+gulp.task('html', htmlTask('src'));
 gulp.task('script', scriptTask('src/js'));
 gulp.task('style', styleTask('src/css'));
-gulp.task('build', ['script', 'style']);
+gulp.task('build', ['html', 'script', 'style']);
 
 gulp.task('watch', function() {
+  gulp.watch('src/pug/**/*.pug', ['html']);
   gulp.watch('src/coffee/**/*.coffee', ['script']);
   gulp.watch('src/less/**/*.less', ['style']);
 });
@@ -96,8 +120,8 @@ gulp.task('package', function(){
     var deferred = Q.defer();
     Q.fcall(function(){return util.logPromise(cleanTask)})
     .then(function(){return Q.all([
-        util.logStream(copyHtmlTask),
         util.logStream(copyImgTask),
+        util.logStream(htmlTask('dist')),
         util.logStream(scriptTask('dist/js')),
         util.logStream(styleTask('dist/css'))])});
     return deferred.promise;

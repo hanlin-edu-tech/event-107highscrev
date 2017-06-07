@@ -1,0 +1,75 @@
+- var ehanlin = "https://www.ehanlin.com.tw"
+doctype html
+html(lang="zh-tw")
+    head
+        meta(charset="UTF-8")
+        title 高中學測課程廣告介紹頁 (6月預購版)
+        link(rel="stylesheet" type="text/css" href="./css/index.css")
+    body
+        header
+            a(class="logo" href=ehanlin+"/index.html")
+            span(class="info")
+                span(class="tel") 課程咨詢：
+                    a(href="tel:0800008811") 0800-0088-11
+                span(class="icons")
+                    a(class="facebook" target="_blank" href="https://www.facebook.com/ehanlin.com.tw")
+                    a(class="line" target="_blank" href="http://line.me/R/ti/p/MtsRQz_Hn5")
+        nav
+            each site in ["banner", "teachers", "contents", "prices"]
+                a(href="#"+site)
+        section(id="banner")
+            img(src="./img/section_2.png")/
+        section
+            img(src="./img/section_3.png")/
+            ul(class="benefits")
+                each num in [1, 2, 3, 4]
+                    li(class="card")
+                        img(class="front" src="./img/benefit/benefit_"+num+"_f.png")/
+                        img(class="back"  src="./img/benefit/benefit_"+num+"_b.png")/
+        section
+            img(src="./img/section_4.png")/
+            ul(class="advantages")
+                each num in [1, 2, 3, 4, 5]
+                    li(class="card")
+                        img(class="front" src="./img/advantage/advantage_"+num+"_f.png")/
+                        img(class="back"  src="./img/advantage/advantage_"+num+"_b.png")/
+        section(id="teachers")
+            img(src="./img/section_5.png")/
+            each num in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+                input(id="teacher_"+num name="teacher" type="radio")
+            ol(class="teachers")
+                each num in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+                    li
+                        label(for="teacher_"+num)
+                            img(src="./img/teacher/teacher_"+num+".png")/
+            ol(class="teacher-infos")
+                each num in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+                    li
+                        img(src="./img/teacher/teacher_info_"+num+".png")            
+        section(id="contents")
+            img(src="./img/section_6.png")/
+        section(id="prices")
+            img(src="./img/section_7.png")/
+            each num in [1, 2, 3, 4]
+                span(class="enter")
+        section(id="courses")
+            img(src="./img/section_8.png")/
+            div
+                -
+                    var urls = ["1", 
+                        "2", 
+                        "3",
+                        "4", 
+                        "5",
+                        "6", 
+                        "7",
+                        "8", 
+                        "9",
+                        "10",
+                        "11"]
+                each url in urls
+                    a(class="more_course" href=url)
+        footer
+            img(src="./img/footer.png")/
+            a(target="_blank" href=ehanlin+"/106intro.html")
+        script(type="text/javascript" src="./js/index.js")

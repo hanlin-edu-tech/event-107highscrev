@@ -39,11 +39,13 @@ body > header .icons .line {
   background-image: url(../img/LINE_Logo.png);
 }
 body > nav {
+  z-index: 99999;
   position: fixed;
   display: inline-block;
   right: 0;
   top: calc(50% - 208px);
-  writing-mode: vertical-lr;
+  width: 120px;
+  float: right;
 }
 body > nav > a {
   display: inline-block;

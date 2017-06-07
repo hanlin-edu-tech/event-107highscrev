@@ -18,7 +18,8 @@
     "path" : "0.12.7",
     "browserify" : "14.4.0",
     "coffeeify" : "2.1.0",
-    "less" : "2.7.2"
+    "less" : "2.7.2",
+    "pug" : "2.0.0-rc.2"
   },
   "scripts" : {
     "test" : "echo website"
