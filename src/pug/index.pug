@@ -56,19 +56,20 @@ html(lang="zh-tw")
             img(src="./img/section_8.png")/
             div
                 -
-                    var urls = ["1", 
-                        "2", 
-                        "3",
-                        "4", 
-                        "5",
-                        "6", 
-                        "7",
-                        "8", 
-                        "9",
-                        "10",
-                        "11"]
+                    var urls = [
+                        "/type/ONLINE/id/y105_sh_rev_pc_et/SalesPlans.html", 
+                        "/type/ONLINE/id/y105_sh_rev_pc30_et/SalesPlans.html", 
+                        "/type/ONLINE/id/y105_sh_rev_en_et/SalesPlans.html",
+                        "/type/ONLINE/id/y105_sh_rev_ma_et/SalesPlans.html", 
+                        "/type/ONLINE/id/y105_sh_rev_ph_et/SalesPlans.html",
+                        "/type/ONLINE/id/y105_sh_rev_ch_et/SalesPlans.html", 
+                        "/type/ONLINE/id/y105_sh_rev_bi_et/SalesPlans.html",
+                        "/type/ONLINE/id/y105_sh_rev_ea_et/SalesPlans.html", 
+                        "/type/ONLINE/id/y105_sh_rev_ge_et/SalesPlans.html",
+                        "/type/ONLINE/id/y105_sh_rev_hi_et/SalesPlans.html",
+                        "/type/ONLINE/id/y105_sh_rev_cs_et/SalesPlans.html"]
                 each url in urls
-                    a(class="more_course" href=url)
+                    a(class="more_course" target="_blank" href=ehanlin+url)
         footer
             img(src="./img/footer.png")/
             a(target="_blank" href=ehanlin+"/106intro.html")
