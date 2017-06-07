@@ -8,4 +8,57 @@ body {
         display: inline-block;
         width: 980px;
     }
+
+    > header {
+        .logo {
+            float: left;
+            display: inline-block;
+            width: 304px;
+            height: 35px;
+            background: url(https://www.ehanlin.com.tw/images/ehanlin_logo.png);
+        }
+
+        .info {
+            display: inline-block;
+            float: right;
+        }
+
+        .tel {
+            display: inline-block;
+        }
+
+        .icons {
+            display: inline-block;
+            
+            > a {
+                display: inline-block;
+                background-size: 22px;
+                width: 22px;
+                height: 22px;
+            }
+
+            .facebook {
+                background-image: url(../img/FB_Logo.png);
+            }
+            
+            .line {
+                background-image: url(../img/LINE_Logo.png);
+            }
+        }
+    }
+
+    > nav {
+        position: fixed;
+        display: inline-block;
+        right: 0;
+        top: calc(~"50% - 168px");
+        writing-mode: vertical-lr;
+
+        > a {
+            display: inline-block;
+            padding: 5px;
+            border: #0000FF 5px solid;
+        }
+    }
+
 }

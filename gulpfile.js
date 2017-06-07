@@ -87,6 +87,11 @@ gulp.task('script', scriptTask('src/js'));
 gulp.task('style', styleTask('src/css'));
 gulp.task('build', ['script', 'style']);
 
+gulp.task('watch', function() {
+  gulp.watch('src/coffee/*.coffee', ['script']);
+  gulp.watch('src/less/*.less', ['style']);
+});
+
 gulp.task('package', function(){
     var deferred = Q.defer();
     Q.fcall(function(){return util.logPromise(cleanTask)})
