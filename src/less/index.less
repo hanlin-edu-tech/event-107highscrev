@@ -174,4 +174,69 @@ body {
         }
         .loop(10)
     }
+
+    #prices {
+        position: relative;
+        .enter {
+            display: inline-block;
+            background-image: url(../img/enter.png);
+            background-repeat: no-repeat;
+            width: 224px;
+            height: 75px;
+            position: absolute;
+
+            &:nth-child(2), &:nth-child(3){
+                top: 350px;
+            }
+            &:nth-child(4), &:nth-child(5){
+                top: 665px;
+            }
+            &:nth-child(2), &:nth-child(4){
+                left: 50px;
+            }
+            &:nth-child(3), &:nth-child(5){
+                left: 515px;
+            }
+            
+        }
+    }
+
+    #courses {
+        position: relative;
+        text-align: left;
+
+        > img {
+            width: 80%;
+        }
+
+        > div {
+            position: absolute;
+            display: inline-block;
+            width: 240px;
+            top: 95px;
+            right: 0px;
+        }
+
+        .more_course {
+            display: inline-block;
+            width: 237px;
+            height: 51px;            
+            background-image: url(../img/more_course.png);
+            background-repeat: no-repeat;
+            margin-bottom: 42px;
+        }
+    }
+
+    > footer {
+        position: relative;
+        > a {
+            position: relative;
+            display: inline-block;
+            width: 239px;
+            height: 54px;
+            top: -68px;
+            background-image: url(../img/more.png);
+            background-repeat: no-repeat;
+        }
+    }
 }

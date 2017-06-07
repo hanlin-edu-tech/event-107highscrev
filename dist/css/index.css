@@ -187,3 +187,64 @@ body #teachers #teacher_9:checked ~ .teacher-infos li:nth-child(9) {
 body #teachers #teacher_10:checked ~ .teacher-infos li:nth-child(10) {
   display: block;
 }
+body #prices {
+  position: relative;
+}
+body #prices .enter {
+  display: inline-block;
+  background-image: url(../img/enter.png);
+  background-repeat: no-repeat;
+  width: 224px;
+  height: 75px;
+  position: absolute;
+}
+body #prices .enter:nth-child(2),
+body #prices .enter:nth-child(3) {
+  top: 350px;
+}
+body #prices .enter:nth-child(4),
+body #prices .enter:nth-child(5) {
+  top: 665px;
+}
+body #prices .enter:nth-child(2),
+body #prices .enter:nth-child(4) {
+  left: 50px;
+}
+body #prices .enter:nth-child(3),
+body #prices .enter:nth-child(5) {
+  left: 515px;
+}
+body #courses {
+  position: relative;
+  text-align: left;
+}
+body #courses > img {
+  width: 80%;
+}
+body #courses > div {
+  position: absolute;
+  display: inline-block;
+  width: 240px;
+  top: 95px;
+  right: 0px;
+}
+body #courses .more_course {
+  display: inline-block;
+  width: 237px;
+  height: 51px;
+  background-image: url(../img/more_course.png);
+  background-repeat: no-repeat;
+  margin-bottom: 42px;
+}
+body > footer {
+  position: relative;
+}
+body > footer > a {
+  position: relative;
+  display: inline-block;
+  width: 239px;
+  height: 54px;
+  top: -68px;
+  background-image: url(../img/more.png);
+  background-repeat: no-repeat;
+}

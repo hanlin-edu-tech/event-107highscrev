@@ -49,7 +49,7 @@ function buildStyle(){
 
 function scriptTask(dest){
     return function(){
-        return gulp.src('src/coffee/*.coffee')
+        return gulp.src('src/coffee/**/*.coffee')
             .pipe(buildScript())
             .pipe(rename({extname:'.js'}))
             .pipe(gulp.dest(dest));};
@@ -57,7 +57,7 @@ function scriptTask(dest){
 
 function styleTask(dest){
     return function(){
-        return gulp.src('src/less/*.less')
+        return gulp.src('src/less/**/*.less')
             .pipe(buildStyle())
             .pipe(rename({extname:'.css'}))
             .pipe(gulp.dest(dest));};
@@ -71,12 +71,12 @@ function cleanTask(){
 }
 
 function copyImgTask(){
-    return gulp.src('src/img/*')
+    return gulp.src('src/img/**/*')
         .pipe(gulp.dest('dist/img'));
 }
 
 function copyHtmlTask(){
-    return gulp.src('src/**.html')
+    return gulp.src('src/**/*.html')
         .pipe(gulp.dest('dist'));
 }
 
@@ -88,8 +88,8 @@ gulp.task('style', styleTask('src/css'));
 gulp.task('build', ['script', 'style']);
 
 gulp.task('watch', function() {
-  gulp.watch('src/coffee/*.coffee', ['script']);
-  gulp.watch('src/less/*.less', ['style']);
+  gulp.watch('src/coffee/**/*.coffee', ['script']);
+  gulp.watch('src/less/**/*.less', ['style']);
 });
 
 gulp.task('package', function(){
