@@ -51,14 +51,127 @@ body {
         position: fixed;
         display: inline-block;
         right: 0;
-        top: calc(~"50% - 168px");
+        top: calc(~"50% - 208px");
         writing-mode: vertical-lr;
 
         > a {
             display: inline-block;
-            padding: 5px;
-            border: #0000FF 5px solid;
+            width: 120px;
+            height: 100px;
+        }
+
+        .nav-a(@site){
+            > a[href="#@{site}"] {
+                background-image: url("../img/nav/@{site}.png");
+            }
+        }
+
+        .nav-a(banner);
+        .nav-a(teachers);
+        .nav-a(contents);
+        .nav-a(prices);
+
+    }
+
+    > section > img {
+        width: 100%;
+    }
+
+    .cardRotateY() {
+        > .front, > .back {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            backface-visibility: hidden;
+            transition: all 1s;            
+        }
+
+        > .front {transform: rotateY(0deg);}
+        > .back  {transform: rotateY(180deg);}
+
+        &:hover {
+            > .front {transform: rotateY(180deg);}
+            > .back  {transform: rotateY(0deg);}
+        }        
+    }
+
+    .benefits > .card {
+        list-style-type: none;
+        width: 461px;
+        height: 67px;
+        display: inline-block;
+        position: relative;
+
+        .cardRotateY();
+    }
+
+    .advantages {
+        list-style-type: none;
+        margin-top: -265px;
+        line-height: 125px;
+
+        > .card {
+            width: 195px;
+            height: 195px;
+            display: inline-block;
+            position: relative;
+            transform: rotate(45deg);
+            margin-left: 80px;
+
+            > img {
+                width: 195px;
+            }
+
+            &:first-child {
+                margin-left: 180px;
+            }
+
+            &:nth-child(3) {
+                margin-left: 180px;   
+            }
+
+            &:nth-child(3),&:nth-child(4),&:nth-child(5) {
+                margin-top: -100px;   
+            }
+
+            .cardRotateY();
         }
     }
 
+    #teachers {
+        input[name="teacher"] {
+            display: none;
+        }
+
+        ol {
+            padding-left: 0px;
+            text-align: center;
+            list-style-type: none;
+        }
+
+        .teachers > li {
+            display: inline-block;
+            margin-left: -95px;
+
+            &:first-child {
+                margin-left: 0px;                
+            }
+        }
+
+        .teacher-infos > li {
+            display: none;
+        }
+
+        .teacher-radio(@num) {
+            #teacher_@{num}:checked ~ .teacher-infos li:nth-child(@{num}) {
+                display: block;
+            }
+        }
+
+        .loop(@counter) when (@counter > 0) {
+            .loop((@counter - 1));
+            .teacher-radio(@counter);
+        }
+        .loop(10)
+    }
 }
