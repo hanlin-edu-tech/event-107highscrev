@@ -48,11 +48,13 @@ body {
     }
 
     > nav {
+        z-index: 99999;
         position: fixed;
         display: inline-block;
         right: 0;
         top: calc(~"50% - 208px");
-        writing-mode: vertical-lr;
+        width: 120px;
+        float: right;
 
         > a {
             display: inline-block;
@@ -83,7 +85,7 @@ body {
             top: 0px;
             right: 0px;
             backface-visibility: hidden;
-            transition: all 1s;            
+            transition: all 1s;
         }
 
         > .front {transform: rotateY(0deg);}
