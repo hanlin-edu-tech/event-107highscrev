@@ -10260,10 +10260,6 @@ return jQuery;
 
   $ = require('jquery');
 
-  $(function() {
-    return alert('hello');
-  });
-
 }).call(this);
 
 

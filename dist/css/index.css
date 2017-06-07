@@ -9,3 +9,181 @@ body > footer {
   display: inline-block;
   width: 980px;
 }
+body > header .logo {
+  float: left;
+  display: inline-block;
+  width: 304px;
+  height: 35px;
+  background: url(https://www.ehanlin.com.tw/images/ehanlin_logo.png);
+}
+body > header .info {
+  display: inline-block;
+  float: right;
+}
+body > header .tel {
+  display: inline-block;
+}
+body > header .icons {
+  display: inline-block;
+}
+body > header .icons > a {
+  display: inline-block;
+  background-size: 22px;
+  width: 22px;
+  height: 22px;
+}
+body > header .icons .facebook {
+  background-image: url(../img/FB_Logo.png);
+}
+body > header .icons .line {
+  background-image: url(../img/LINE_Logo.png);
+}
+body > nav {
+  position: fixed;
+  display: inline-block;
+  right: 0;
+  top: calc(50% - 208px);
+  writing-mode: vertical-lr;
+}
+body > nav > a {
+  display: inline-block;
+  width: 120px;
+  height: 100px;
+}
+body > nav > a[href="#banner"] {
+  background-image: url("../img/nav/banner.png");
+}
+body > nav > a[href="#teachers"] {
+  background-image: url("../img/nav/teachers.png");
+}
+body > nav > a[href="#contents"] {
+  background-image: url("../img/nav/contents.png");
+}
+body > nav > a[href="#prices"] {
+  background-image: url("../img/nav/prices.png");
+}
+body > section > img {
+  width: 100%;
+}
+body .benefits > .card {
+  list-style-type: none;
+  width: 461px;
+  height: 67px;
+  display: inline-block;
+  position: relative;
+}
+body .benefits > .card > .front,
+body .benefits > .card > .back {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  backface-visibility: hidden;
+  transition: all 1s;
+}
+body .benefits > .card > .front {
+  transform: rotateY(0deg);
+}
+body .benefits > .card > .back {
+  transform: rotateY(180deg);
+}
+body .benefits > .card:hover > .front {
+  transform: rotateY(180deg);
+}
+body .benefits > .card:hover > .back {
+  transform: rotateY(0deg);
+}
+body .advantages {
+  list-style-type: none;
+  margin-top: -265px;
+  line-height: 125px;
+}
+body .advantages > .card {
+  width: 195px;
+  height: 195px;
+  display: inline-block;
+  position: relative;
+  transform: rotate(45deg);
+  margin-left: 80px;
+}
+body .advantages > .card > img {
+  width: 195px;
+}
+body .advantages > .card:first-child {
+  margin-left: 180px;
+}
+body .advantages > .card:nth-child(3) {
+  margin-left: 180px;
+}
+body .advantages > .card:nth-child(3),
+body .advantages > .card:nth-child(4),
+body .advantages > .card:nth-child(5) {
+  margin-top: -100px;
+}
+body .advantages > .card > .front,
+body .advantages > .card > .back {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  backface-visibility: hidden;
+  transition: all 1s;
+}
+body .advantages > .card > .front {
+  transform: rotateY(0deg);
+}
+body .advantages > .card > .back {
+  transform: rotateY(180deg);
+}
+body .advantages > .card:hover > .front {
+  transform: rotateY(180deg);
+}
+body .advantages > .card:hover > .back {
+  transform: rotateY(0deg);
+}
+body #teachers input[name="teacher"] {
+  display: none;
+}
+body #teachers ol {
+  padding-left: 0px;
+  text-align: center;
+  list-style-type: none;
+}
+body #teachers .teachers > li {
+  display: inline-block;
+  margin-left: -95px;
+}
+body #teachers .teachers > li:first-child {
+  margin-left: 0px;
+}
+body #teachers .teacher-infos > li {
+  display: none;
+}
+body #teachers #teacher_1:checked ~ .teacher-infos li:nth-child(1) {
+  display: block;
+}
+body #teachers #teacher_2:checked ~ .teacher-infos li:nth-child(2) {
+  display: block;
+}
+body #teachers #teacher_3:checked ~ .teacher-infos li:nth-child(3) {
+  display: block;
+}
+body #teachers #teacher_4:checked ~ .teacher-infos li:nth-child(4) {
+  display: block;
+}
+body #teachers #teacher_5:checked ~ .teacher-infos li:nth-child(5) {
+  display: block;
+}
+body #teachers #teacher_6:checked ~ .teacher-infos li:nth-child(6) {
+  display: block;
+}
+body #teachers #teacher_7:checked ~ .teacher-infos li:nth-child(7) {
+  display: block;
+}
+body #teachers #teacher_8:checked ~ .teacher-infos li:nth-child(8) {
+  display: block;
+}
+body #teachers #teacher_9:checked ~ .teacher-infos li:nth-child(9) {
+  display: block;
+}
+body #teachers #teacher_10:checked ~ .teacher-infos li:nth-child(10) {
+  display: block;
+}
