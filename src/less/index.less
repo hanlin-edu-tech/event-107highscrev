@@ -15,7 +15,7 @@ body {
         position: fixed;
         top: 0px;
         background-color: rgba(255, 255, 255, 0.8);
-        z-index: 99998;
+        z-index: 99997;
         text-align: left;
         line-height: 35px;
         padding: 5px 0px;
@@ -69,7 +69,7 @@ body {
     }
 
     > nav {
-        z-index: 99999;
+        z-index: 99998;
         position: fixed;
         display: inline-block;
         right: 0;
@@ -261,5 +261,47 @@ body {
             background-image: url(../img/more.png);
             background-repeat: no-repeat;
         }
+    }
+
+    > #enter-alert {
+        width: 0px;
+        height: 0px;
+        border: none;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    > .enter-alert {
+        transition: all 0.3s;
+        visibility: hidden;
+        opacity: 0;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 99999;
+
+        > p {
+            position: fixed;
+            padding: 20px 0px;
+            background-color: #f40567;
+            font-size: 36px;
+            left: 0px;
+            right: 0px;
+            top: calc(~"50% - 70px");
+
+            > strong {
+                color: #fff100;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    > #enter-alert:focus + .enter-alert{
+        visibility: visible;
+        opacity: 1;
     }
 }

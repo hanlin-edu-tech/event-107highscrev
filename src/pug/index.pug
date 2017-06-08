@@ -7,48 +7,57 @@ html(lang="zh-tw")
         link(rel="stylesheet" type="text/css" href="./css/index.css")
     body
         header
-            a(class="logo" href=ehanlin+"/index.html")
-            span(class="tel") 課程咨詢
+            a.logo(href=ehanlin+"/index.html")
+            span.tel 課程咨詢
                 a(href="tel:0800008811")
                     i(class="fa fa-phone" aria-hidden="true")
                     | 0800-008811
-            span(class="icons")
-                a(class="facebook" target="_blank" href="https://www.facebook.com/ehanlin.com.tw")
-                a(class="line" target="_blank" href="http://line.me/R/ti/p/MtsRQz_Hn5")
+            span.icons
+                a.facebook(target="_blank" href="https://www.facebook.com/ehanlin.com.tw")
+                a.line(target="_blank" href="http://line.me/R/ti/p/MtsRQz_Hn5")
         nav
             each site in ["banner", "teachers", "contents", "prices"]
                 a(href="#"+site)
-        section(id="banner"): img(src="./img/section_2.png")/
+        section#banner: img(src="./img/section_2.png")/
         section
             img(src="./img/section_3.png")/
-            ul(class="benefits")
+            ul.benefits
                 each num in [1, 2, 3, 4]
-                    li(class="card")
-                        img(class="front" src="./img/benefit/benefit_"+num+"_f.png")/
-                        img(class="back"  src="./img/benefit/benefit_"+num+"_b.png")/
+                    li.card
+                        img.front(src="./img/benefit/benefit_"+num+"_f.png")/
+                        img.back(src="./img/benefit/benefit_"+num+"_b.png")/
         section
             img(src="./img/section_4.png")/
-            ul(class="advantages")
+            ul.advantages
                 each num in [1, 2, 3, 4, 5]
-                    li(class="card")
-                        img(class="front" src="./img/advantage/advantage_"+num+"_f.png")/
-                        img(class="back"  src="./img/advantage/advantage_"+num+"_b.png")/
-        section(id="teachers")
+                    li.card
+                        img.front(src="./img/advantage/advantage_"+num+"_f.png")/
+                        img.back(src="./img/advantage/advantage_"+num+"_b.png")/
+        section#teachers
             img(src="./img/section_5.png")/
             each num in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
                 input(id="teacher_"+num name="teacher" type="radio")
-            ol(class="teachers")
+            ol.teachers
                 each num in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
                     li: label(for="teacher_"+num): img(src="./img/teacher/teacher_"+num+".png")/
             ol(class="teacher-infos")
                 each num in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
                     li: img(src="./img/teacher/teacher_info_"+num+".png")            
-        section(id="contents"): img(src="./img/section_6.png")/
-        section(id="prices")
+        section#contents: img(src="./img/section_6.png")/
+        input#enter-alert
+        div.enter-alert
+            p 
+                | 此為<學測早鳥預購專案>
+                br/
+                | 請您立即來電
+                strong 0800 - 008811
+                br/
+                | 將有專人用此價格為您報名劃位
+        section#prices
             img(src="./img/section_7.png")/
             each num in [1, 2, 3, 4]
-                span(class="enter")
-        section(id="courses")
+                label.enter(for="enter-alert")
+        section#courses
             img(src="./img/section_8.png")/
             div
                 -
@@ -65,7 +74,7 @@ html(lang="zh-tw")
                         "/type/ONLINE/id/y105_sh_rev_hi_et/SalesPlans.html",
                         "/type/ONLINE/id/y105_sh_rev_cs_et/SalesPlans.html"]
                 each url in urls
-                    a(class="more_course" target="_blank" href=ehanlin+url)
+                    a.more_course(target="_blank" href=ehanlin+url)
         footer
             img(src="./img/footer.png")/
             a(target="_blank" href=ehanlin+"/106intro.html")
