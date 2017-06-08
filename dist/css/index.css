@@ -2501,20 +2501,100 @@ body .advantages > .card:hover > .back {
 body #teachers input[name="teacher"] {
   display: none;
 }
-body #teachers ol {
+body #teachers ul {
   padding-left: 0px;
   text-align: center;
   list-style-type: none;
 }
 body #teachers .teachers > li {
+  position: relative;
   display: inline-block;
-  margin-left: -95px;
+  width: 85px;
+  opacity: 1.0;
+  transition: all 0.3s;
 }
-body #teachers .teachers > li:first-child {
-  margin-left: 0px;
+body #teachers .teachers > li > span {
+  display: inline-block;
+}
+body #teachers .teachers > li > span > img {
+  margin-left: calc(42.5px - 50%);
+  transition: all 0.3s;
+}
+body #teachers .teachers > li.removing {
+  width: 0px;
+  opacity: 0.0;
+}
+body #teachers .teachers > li.focus {
+  transition: all 0.7s ease-in-out;
+  width: 160px;
+}
+body #teachers .teachers > li.focus > span > img {
+  transition: all 0.7s ease-in-out;
+  margin-left: calc(80px - 50%);
+}
+body #teachers .teachers > li:nth-child(1) {
+  z-index: 80001;
+}
+body #teachers .teachers > li:nth-child(2) {
+  z-index: 80002;
+}
+body #teachers .teachers > li:nth-child(3) {
+  z-index: 80003;
+}
+body #teachers .teachers > li:nth-child(4) {
+  z-index: 80004;
+}
+body #teachers .teachers > li:nth-child(5) {
+  z-index: 80010;
+}
+body #teachers .teachers > li:nth-child(6) {
+  z-index: 80009;
+}
+body #teachers .teachers > li:nth-child(7) {
+  z-index: 80008;
+}
+body #teachers .teachers > li:nth-child(8) {
+  z-index: 80007;
+}
+body #teachers .teachers > li:nth-child(9) {
+  z-index: 80006;
+}
+body #teachers .teachers > li:nth-child(10) {
+  z-index: 80005;
+}
+body #teachers > div {
+  position: relative;
+  z-index: 89000;
+  top: -170px;
+}
+body #teachers > div > button {
+  display: inline-block;
+  padding: 0px;
+  font-size: 64px;
+  border-radius: 32px;
+  width: 64px;
+  height: 64px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+body #teachers > div > button:focus {
+  outline: none;
+}
+body #teachers > div > button > i {
+  vertical-align: top;
+}
+body #teachers > div > button.left {
+  float: left;
+}
+body #teachers > div > button.right {
+  float: right;
 }
 body #teachers .teacher-infos > li {
   display: none;
+}
+body #teachers .teacher-infos > li:nth-child(5) {
+  display: block;
 }
 body #teachers #teacher_1:checked ~ .teacher-infos li:nth-child(1) {
   display: block;
@@ -2556,6 +2636,7 @@ body #prices .enter {
   width: 224px;
   height: 75px;
   position: absolute;
+  cursor: pointer;
 }
 body #prices .enter:nth-child(2),
 body #prices .enter:nth-child(3) {
