@@ -60,6 +60,20 @@ function buildStyle(){
     });
 }
 
+function libTask(dest){
+    return function(){
+        var packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8').toString());
+        if(!packageJson.dependencies){
+            packageJson.dependencies = {};
+        }
+        var webLibModules = [];
+        for(var module in packageJson.dependencies){
+            webLibModules.push('node_modules/' + module + '/**/*');
+        }
+        return gulp.src(webLibModules, {base : 'node_modules/'})
+            .pipe(gulp.dest(dest));};   
+}
+
 function htmlTask(dest){
     return function(){
         return gulp.src('src/pug/**/*.pug')
@@ -108,7 +122,8 @@ gulp.task('clean', cleanTask);
 gulp.task('html', htmlTask('src'));
 gulp.task('script', scriptTask('src/js'));
 gulp.task('style', styleTask('src/css'));
-gulp.task('build', ['html', 'script', 'style']);
+gulp.task('lib', libTask('src/lib'))
+gulp.task('build', ['html', 'script', 'style', 'lib']);
 
 gulp.task('watch', function() {
   gulp.watch('src/pug/**/*.pug', ['html']);
@@ -121,6 +136,7 @@ gulp.task('package', function(){
     Q.fcall(function(){return util.logPromise(cleanTask)})
     .then(function(){return Q.all([
         util.logStream(copyImgTask),
+        util.logStream(libTask('dist/lib')),
         util.logStream(htmlTask('dist')),
         util.logStream(scriptTask('dist/js')),
         util.logStream(styleTask('dist/css'))])});

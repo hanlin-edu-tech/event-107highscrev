@@ -1,8 +1,10 @@
-body {
+@import "../lib/font-awesome/less/font-awesome.less";
+@fa-font-path: "../lib/font-awesome/fonts";
 
+body {
     text-align: center;
-    background: url(https://www.ehanlin.com.tw/images/body_bg.jpg) repeat;
-    color: #898989;
+    color: #FFFFFF;
+    padding-top: 46px;
 
     > header, > section, > footer {
         display: inline-block;
@@ -10,31 +12,50 @@ body {
     }
 
     > header {
+        position: fixed;
+        top: 0px;
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: 99998;
+        text-align: left;
+        line-height: 35px;
+        padding: 5px 0px;
+
         .logo {
-            float: left;
+            vertical-align: middle;
             display: inline-block;
             width: 304px;
             height: 35px;
             background: url(https://www.ehanlin.com.tw/images/ehanlin_logo.png);
         }
 
-        .info {
-            display: inline-block;
-            float: right;
-        }
-
         .tel {
+            vertical-align: middle;
             display: inline-block;
+            color: #FF0000;
+            margin-left: 24px;
+            font-size: 24px;
+
+            > a {
+                color: #FF0000;
+                text-decoration: none;
+                > i {
+                    margin-left: 24px;
+                }
+            }
         }
 
         .icons {
+            vertical-align: middle;
             display: inline-block;
+            float: right;
             
             > a {
+                vertical-align: middle;
                 display: inline-block;
                 background-size: 22px;
                 width: 22px;
                 height: 22px;
+                margin-left: 5px;
             }
 
             .facebook {
