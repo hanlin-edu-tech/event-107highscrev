@@ -35,13 +35,15 @@ html(lang="zh-tw")
                         img.back(src="./img/advantage/advantage_"+num+"_b.png")/
         section#teachers
             img(src="./img/section_5.png")/
-            each num in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-                input(id="teacher_"+num name="teacher" type="radio")
-            ol.teachers
-                each num in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-                    li: label(for="teacher_"+num): img(src="./img/teacher/teacher_"+num+".png")/
-            ol(class="teacher-infos")
-                each num in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            - var teacherNums = [9, 5, 2, 7, 8, 3, 1, 4, 6, 10]
+            ul.teachers
+                each num in teacherNums
+                    li: span: img(src="./img/teacher/teacher_"+num+".png")/
+            div
+                button.left: i(class="fa fa-angle-double-left" aria-hidden="true")
+                button.right: i(class="fa fa-angle-double-right" aria-hidden="true")
+            ul.teacher-infos
+                each num in teacherNums
                     li: img(src="./img/teacher/teacher_info_"+num+".png")            
         section#contents: img(src="./img/section_6.png")/
         input#enter-alert

@@ -166,23 +166,87 @@ body {
             display: none;
         }
 
-        ol {
+        ul {
             padding-left: 0px;
             text-align: center;
             list-style-type: none;
         }
 
         .teachers > li {
+            position: relative;;
             display: inline-block;
-            margin-left: -95px;
+            width: 85px;
+            opacity: 1.0;
+            transition: all 0.3s;
 
-            &:first-child {
-                margin-left: 0px;                
+            > span {
+                display: inline-block;
+                > img {
+                    margin-left: calc(~"42.5px - 50%");
+                    transition: all 0.3s;
+                }                
             }
+
+            &.removing {
+                width: 0px;
+                opacity: 0.0;
+            }
+
+            &.focus {
+                transition: all 0.7s ease-in-out;
+                width: 160px;
+                > span > img {
+                    transition: all 0.7s ease-in-out;
+                    margin-left: calc(~"80px - 50%");
+                }
+            }
+
+            &:nth-child(1){ z-index: 80001;}
+            &:nth-child(2){ z-index: 80002;}
+            &:nth-child(3){ z-index: 80003;}
+            &:nth-child(4){ z-index: 80004;}
+            &:nth-child(5){z-index: 80010;}
+            &:nth-child(6){ z-index: 80009;}
+            &:nth-child(7){ z-index: 80008;}
+            &:nth-child(8){ z-index: 80007;}
+            &:nth-child(9){ z-index: 80006;}
+            &:nth-child(10){ z-index: 80005;}
+        }
+
+        > div {
+            position: relative;
+            z-index: 89000;
+            top: -170px;
+                > button {
+                display: inline-block;
+                padding: 0px;
+                font-size: 64px;
+                border-radius: 32px;
+                width: 64px;
+                height: 64px;
+                border: none;
+                background-color: rgba(255, 255, 255, 0.8);
+                text-align: center;
+
+                &:focus {
+                    outline: none;
+                }
+
+                > i {
+                    vertical-align: top;
+                }
+
+                &.left { float: left; }
+                &.right { float: right; }
+            }
+
         }
 
         .teacher-infos > li {
             display: none;
+            &:nth-child(5){
+                display: block;
+            }
         }
 
         .teacher-radio(@num) {
@@ -207,6 +271,7 @@ body {
             width: 224px;
             height: 75px;
             position: absolute;
+            cursor: pointer;
 
             &:nth-child(2), &:nth-child(3){
                 top: 350px;
