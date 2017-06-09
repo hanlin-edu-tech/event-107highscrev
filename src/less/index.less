@@ -239,16 +239,25 @@ body {
                     vertical-align: top;
                 }
 
-                &.left { float: left; }
-                &.right { float: right; }
+                &.left { 
+                    float: left; 
+                    margin-left: 310px;
+                }
+                &.right { 
+                    float: right;
+                    margin-right: 380px; 
+                }
             }
 
         }
 
         .teacher-infos > li {
             display: none;
-            &:nth-child(5){
+            &:nth-child(5) {
                 display: block;
+            }
+            > img {
+                margin-top: -75px;
             }
         }
 
