@@ -144,6 +144,8 @@ body {
             transform: rotate(45deg);
             margin-left: 80px;
 
+            .cardRotateY();
+
             > img {
                 width: 195px;
             }
@@ -158,14 +160,6 @@ body {
 
             &:nth-child(3),&:nth-child(4),&:nth-child(5) {
                 margin-top: -100px;   
-            }
-
-            &:nth-child(odd) {
-                .cardRotateY();
-            }
-
-            &:nth-child(even) {
-                .cardRotateX();
             }
         }
     }
@@ -377,5 +371,33 @@ body {
     > #enter-alert:focus + .enter-alert{
         visibility: visible;
         opacity: 1;
+    }
+}
+
+_:-ms-fullscreen, :root {
+    .benefits > .card, .advantages > .card {
+        > .front, > .back {
+            transform: none;
+            visibility: visible;
+            transition: none;
+            backface-visibility: none;            
+        }
+        > .front {
+            visibility: visible;
+        }
+        > .back  {
+            visibility: hidden;
+        }
+
+        &:hover {
+            > .front {
+                transform: none;
+                visibility: hidden;
+            }
+            > .back  {
+                transform: none;
+                visibility: visible;
+            }
+        }
     }
 }
