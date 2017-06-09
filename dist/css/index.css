@@ -2586,15 +2586,20 @@ body #teachers > div > button > i {
 }
 body #teachers > div > button.left {
   float: left;
+  margin-left: 310px;
 }
 body #teachers > div > button.right {
   float: right;
+  margin-right: 380px;
 }
 body #teachers .teacher-infos > li {
   display: none;
 }
 body #teachers .teacher-infos > li:nth-child(5) {
   display: block;
+}
+body #teachers .teacher-infos > li > img {
+  margin-top: -75px;
 }
 body #teachers #teacher_1:checked ~ .teacher-infos li:nth-child(1) {
   display: block;
