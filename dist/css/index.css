@@ -2464,6 +2464,26 @@ body .advantages > .card {
   transform: rotate(45deg);
   margin-left: 80px;
 }
+body .advantages > .card > .front,
+body .advantages > .card > .back {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  backface-visibility: hidden;
+  transition: all 1s;
+}
+body .advantages > .card > .front {
+  transform: rotateY(0deg);;
+}
+body .advantages > .card > .back {
+  transform: rotateY(180deg);;
+}
+body .advantages > .card:hover > .front {
+  transform: rotateY(180deg);;
+}
+body .advantages > .card:hover > .back {
+  transform: rotateY(0deg);;
+}
 body .advantages > .card > img {
   width: 195px;
 }
@@ -2477,46 +2497,6 @@ body .advantages > .card:nth-child(3),
 body .advantages > .card:nth-child(4),
 body .advantages > .card:nth-child(5) {
   margin-top: -100px;
-}
-body .advantages > .card:nth-child(odd) > .front,
-body .advantages > .card:nth-child(odd) > .back {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  backface-visibility: hidden;
-  transition: all 1s;
-}
-body .advantages > .card:nth-child(odd) > .front {
-  transform: rotateY(0deg);;
-}
-body .advantages > .card:nth-child(odd) > .back {
-  transform: rotateY(180deg);;
-}
-body .advantages > .card:nth-child(odd):hover > .front {
-  transform: rotateY(180deg);;
-}
-body .advantages > .card:nth-child(odd):hover > .back {
-  transform: rotateY(0deg);;
-}
-body .advantages > .card:nth-child(even) > .front,
-body .advantages > .card:nth-child(even) > .back {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  backface-visibility: hidden;
-  transition: all 1s;
-}
-body .advantages > .card:nth-child(even) > .front {
-  transform: rotateX(0deg);;
-}
-body .advantages > .card:nth-child(even) > .back {
-  transform: rotateX(180deg);;
-}
-body .advantages > .card:nth-child(even):hover > .front {
-  transform: rotateX(180deg);;
-}
-body .advantages > .card:nth-child(even):hover > .back {
-  transform: rotateX(0deg);;
 }
 body #teachers input[name="teacher"] {
   display: none;
@@ -2744,4 +2724,43 @@ body > .enter-alert > p > strong {
 body > #enter-alert:focus + .enter-alert {
   visibility: visible;
   opacity: 1;
+}
+_:-ms-fullscreen .benefits > .card > .front,
+:root .benefits > .card > .front,
+_:-ms-fullscreen .advantages > .card > .front,
+:root .advantages > .card > .front,
+_:-ms-fullscreen .benefits > .card > .back,
+:root .benefits > .card > .back,
+_:-ms-fullscreen .advantages > .card > .back,
+:root .advantages > .card > .back {
+  transform: none;
+  visibility: visible;
+  transition: none;
+  backface-visibility: none;
+}
+_:-ms-fullscreen .benefits > .card > .front,
+:root .benefits > .card > .front,
+_:-ms-fullscreen .advantages > .card > .front,
+:root .advantages > .card > .front {
+  visibility: visible;
+}
+_:-ms-fullscreen .benefits > .card > .back,
+:root .benefits > .card > .back,
+_:-ms-fullscreen .advantages > .card > .back,
+:root .advantages > .card > .back {
+  visibility: hidden;
+}
+_:-ms-fullscreen .benefits > .card:hover > .front,
+:root .benefits > .card:hover > .front,
+_:-ms-fullscreen .advantages > .card:hover > .front,
+:root .advantages > .card:hover > .front {
+  transform: none;
+  visibility: hidden;
+}
+_:-ms-fullscreen .benefits > .card:hover > .back,
+:root .benefits > .card:hover > .back,
+_:-ms-fullscreen .advantages > .card:hover > .back,
+:root .advantages > .card:hover > .back {
+  transform: none;
+  visibility: visible;
 }
