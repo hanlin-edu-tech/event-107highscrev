@@ -2440,16 +2440,16 @@ body .benefits > .card > .back {
   transition: all 1s;
 }
 body .benefits > .card > .front {
-  transform: rotateY(0deg);
+  transform: rotateY(0deg);;
 }
 body .benefits > .card > .back {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg);;
 }
 body .benefits > .card:hover > .front {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg);;
 }
 body .benefits > .card:hover > .back {
-  transform: rotateY(0deg);
+  transform: rotateY(0deg);;
 }
 body .advantages {
   list-style-type: none;
@@ -2478,25 +2478,45 @@ body .advantages > .card:nth-child(4),
 body .advantages > .card:nth-child(5) {
   margin-top: -100px;
 }
-body .advantages > .card > .front,
-body .advantages > .card > .back {
+body .advantages > .card:nth-child(odd) > .front,
+body .advantages > .card:nth-child(odd) > .back {
   position: absolute;
   top: 0px;
   right: 0px;
   backface-visibility: hidden;
   transition: all 1s;
 }
-body .advantages > .card > .front {
-  transform: rotateY(0deg);
+body .advantages > .card:nth-child(odd) > .front {
+  transform: rotateY(0deg);;
 }
-body .advantages > .card > .back {
-  transform: rotateY(180deg);
+body .advantages > .card:nth-child(odd) > .back {
+  transform: rotateY(180deg);;
 }
-body .advantages > .card:hover > .front {
-  transform: rotateY(180deg);
+body .advantages > .card:nth-child(odd):hover > .front {
+  transform: rotateY(180deg);;
 }
-body .advantages > .card:hover > .back {
-  transform: rotateY(0deg);
+body .advantages > .card:nth-child(odd):hover > .back {
+  transform: rotateY(0deg);;
+}
+body .advantages > .card:nth-child(even) > .front,
+body .advantages > .card:nth-child(even) > .back {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  backface-visibility: hidden;
+  transition: all 1s;
+}
+body .advantages > .card:nth-child(even) > .front {
+  transform: rotateX(0deg);;
+}
+body .advantages > .card:nth-child(even) > .back {
+  transform: rotateX(180deg);;
+}
+body .advantages > .card:nth-child(even):hover > .front {
+  transform: rotateX(180deg);;
+}
+body .advantages > .card:nth-child(even):hover > .back {
+  transform: rotateX(0deg);;
 }
 body #teachers input[name="teacher"] {
   display: none;
