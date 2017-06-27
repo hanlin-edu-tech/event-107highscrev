@@ -47,18 +47,10 @@ html(lang="zh-tw")
                 each num in teacherNums
                     li: img(src="./img/teacher/teacher_info_"+num+".png")            
         section#contents: img(src="./img/section_6.png")/
-        input#enter-alert
-        div.enter-alert
-            p 此為&lt;學測早鳥預購專案&gt;
-                br/
-                | 請您立即來電
-                strong 0800 - 008811
-                br/
-                | 將有專人用此價格為您報名劃位
         section#prices
             img(src="./img/section_7.png")/
-            each num in [1, 2, 3, 4]
-                label.enter(for="enter-alert")
+            each url in ["y105_sh_rev_all_et","y106_sh_rev_mainall_et","y106_sh_rev_naall_et","y106_sh_rev_soall_et"]
+                a.enter(target="_blank" href="http://www.ehanlin.com.tw/type/ONLINE/id/"+url+"/SalesPlans.html")
         section#courses
             img(src="./img/section_8.png")/
             div
