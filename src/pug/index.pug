@@ -19,7 +19,7 @@ html(lang="zh-tw")
             each site in ["banner", "teachers", "contents", "prices"]
                 a(href="#"+site)
         section#banner: img(src="./img/section_1.png")/
-        section: img(src="./img/section_2.png")/
+        //section: img(src="./img/section_2.png")/
         section
             img(src="./img/section_3.png")/
             ul.benefits
@@ -66,7 +66,8 @@ html(lang="zh-tw")
                         "/type/ONLINE/id/y105_sh_rev_ea_et/SalesPlans.html", 
                         "/type/ONLINE/id/y105_sh_rev_ge_et/SalesPlans.html",
                         "/type/ONLINE/id/y105_sh_rev_hi_et/SalesPlans.html",
-                        "/type/ONLINE/id/y105_sh_rev_cs_et/SalesPlans.html"]
+                        "/type/ONLINE/id/y105_sh_rev_cs_et/SalesPlans.html",
+                        "/type/ONLINE/id/y106_sh_rev_pc_write_et/SalesPlans.html"]
                 each url in urls
                     a.more_course(target="_blank" href=ehanlin+url)
         footer
