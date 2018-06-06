@@ -1,9 +1,10 @@
-language: node_js
-node_js: "7"
-
 deploy:
-    provider: script
-    script: sh deploy.sh
-    skip_cleanup: true
-    on:
-        tags: true
+  provider: gcs
+  access_key_id: "GCS Interoperable Access Key ID"
+  secret_access_key: "GCS Interoperable Access Secret"
+  bucket: tutor-events
+  skip_cleanup: true
+  acl: public-read
+  local-dir: dist
+  on:
+    tags: true

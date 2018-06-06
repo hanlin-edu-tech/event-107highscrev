@@ -9,3 +9,9 @@ gulp build
 ```
 gulp package
 ```
+
+##GCP Deploy
+```sh
+gsutil -m rm -r gs://tutor-events/event/107highscrev/*
+gsutil -m cp -r -a public-read dist gs://tutor-events/event/107highscrev
+```

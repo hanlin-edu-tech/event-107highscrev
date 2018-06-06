@@ -108,12 +108,12 @@ function cleanTask(){
 
 function copyImgTask(){
     return gulp.src('src/img/**/*')
-        .pipe(gulp.dest('dist/img'));
+        .pipe(gulp.dest('dist/event/107highscrev/img'));
 }
 
 function copyHtmlTask(){
     return gulp.src('src/**/*.html')
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('dist/event/107highscrev'));
 }
 
 
@@ -136,9 +136,9 @@ gulp.task('package', function(){
     Q.fcall(function(){return util.logPromise(cleanTask)})
     .then(function(){return Q.all([
         util.logStream(copyImgTask),
-        util.logStream(libTask('dist/lib')),
-        util.logStream(htmlTask('dist')),
-        util.logStream(scriptTask('dist/js')),
-        util.logStream(styleTask('dist/css'))])});
+        util.logStream(libTask('dist/event/107highscrev/lib')),
+        util.logStream(htmlTask('dist/event/107highscrev')),
+        util.logStream(scriptTask('dist/event/107highscrev/js')),
+        util.logStream(styleTask('dist/event/107highscrev/css'))])});
     return deferred.promise;
 });
