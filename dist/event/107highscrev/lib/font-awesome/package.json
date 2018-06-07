@@ -10,13 +10,12 @@
         "spec": "4.7.0",
         "type": "version"
       },
-      "/private/tmp/11/107highscrev"
+      "/Users/hotdog929/git/107highscrev"
     ]
   ],
   "_from": "font-awesome@4.7.0",
   "_id": "font-awesome@4.7.0",
   "_inCache": true,
-  "_installable": true,
   "_location": "/font-awesome",
   "_nodeVersion": "5.5.0",
   "_npmOperationalInternal": {
@@ -45,7 +44,7 @@
   "_shasum": "8fa8cf0411a1a31afd07b06d2902bb9fc815a133",
   "_shrinkwrap": null,
   "_spec": "font-awesome@4.7.0",
-  "_where": "/private/tmp/11/107highscrev",
+  "_where": "/Users/hotdog929/git/107highscrev",
   "author": {
     "name": "Dave Gandy",
     "email": "dave@fontawesome.io",
