@@ -1,10 +1,11 @@
 - var ehanlin = "https://www.ehanlin.com.tw"
+- var ts = "20190212"
 doctype html
 html(lang="zh-tw")
     head
         meta(charset="UTF-8")
         title 學測總複習課程優惠方案
-        link(rel="stylesheet" type="text/css" href="./css/index.css")
+        link(rel="stylesheet" type="text/css" href="./css/index.css?ts=" + ts)
     body
         header
             a.logo(href=ehanlin+"/index.html")
@@ -18,59 +19,41 @@ html(lang="zh-tw")
         nav
             each site in ["banner", "teachers", "contents", "prices"]
                 a(href="#"+site)
-        section#banner: img(src="./img/section_1.png")/
-        //section: img(src="./img/section_2.png")/
+        section#banner
+            img(src="./img/section_1.png?ts=" + ts)/
+            img(src="./img/marquee.gif?ts=" + ts)/
+
         section
-            img(src="./img/section_3.png")/
-            ul.benefits
-                each num in [1, 2, 3, 4]
-                    li.card
-                        img.front(src="./img/benefit/benefit_"+num+"_f.png")/
-                        img.back(src="./img/benefit/benefit_"+num+"_b.png")/
-        section
-            img(src="./img/section_4.png")/
+            img(src="./img/section_4.png?ts=" + ts)/
             ul.advantages
                 each num in [1, 2, 3, 4, 5]
                     li.card
-                        img.front(src="./img/advantage/advantage_"+num+"_f.png")/
-                        img.back(src="./img/advantage/advantage_"+num+"_b.png")/
+                        img.front(src="./img/advantage/advantage_"+num+"_f.png?ts=" + ts)/
+                        img.back(src="./img/advantage/advantage_"+num+"_b.png?ts=" + ts)/
         section#teachers
-            img(src="./img/section_5.png")/
-            - var teacherNums = [9, 5, 2, 7, 8, 3, 1, 4, 6, 10]
+            img(src="./img/section_5.png?ts=" + ts)/
+            - var teacherNums = [9, 5, 2, 7, 11, 8, 3, 1, 4, 6, 10]
             ul.teachers
                 each num in teacherNums
-                    li: span: img(src="./img/teacher/teacher_"+num+".png")/
+                    li: span: img(src="./img/teacher/teacher_"+num+".png?ts=" + ts)/
             div
                 button.left: i(class="fa fa-angle-double-left" aria-hidden="true")
                 button.right: i(class="fa fa-angle-double-right" aria-hidden="true")
             ul.teacher-infos
                 each num in teacherNums
-                    li: img(src="./img/teacher/teacher_info_"+num+".png")            
-        section#contents: img(src="./img/section_6.png")/
+                    li: img(src="./img/teacher/teacher_info_"+num+".png?ts=" + ts)
+
+        section#contents: img(src="./img/section_6.png?ts=" + ts)/
+
         section#prices
-            img(src="./img/section_7.png")/
-            each url in ["y105_sh_rev_all_et","y106_sh_rev_mainall_et","y106_sh_rev_naall_et","y106_sh_rev_soall_et"]
-                a.enter(target="_blank" href="http://www.ehanlin.com.tw/type/ONLINE/id/"+url+"/SalesPlans.html")
-        section#courses
-            img(src="./img/section_8.png")/
-            div
-                -
-                    var urls = [
-                        "/type/ONLINE/id/y105_sh_rev_pc_et/SalesPlans.html", 
-                        "/type/ONLINE/id/y105_sh_rev_pc30_et/SalesPlans.html", 
-                        "/type/ONLINE/id/y105_sh_rev_en_et/SalesPlans.html",
-                        "/type/ONLINE/id/y105_sh_rev_ma_et/SalesPlans.html", 
-                        "/type/ONLINE/id/y105_sh_rev_ph_et/SalesPlans.html",
-                        "/type/ONLINE/id/y105_sh_rev_ch_et/SalesPlans.html", 
-                        "/type/ONLINE/id/y105_sh_rev_bi_et/SalesPlans.html",
-                        "/type/ONLINE/id/y105_sh_rev_ea_et/SalesPlans.html", 
-                        "/type/ONLINE/id/y105_sh_rev_ge_et/SalesPlans.html",
-                        "/type/ONLINE/id/y105_sh_rev_hi_et/SalesPlans.html",
-                        "/type/ONLINE/id/y105_sh_rev_cs_et/SalesPlans.html",
-                        "/type/ONLINE/id/y106_sh_rev_pc_write_et/SalesPlans.html"]
-                each url in urls
-                    a.more_course(target="_blank" href=ehanlin+url)
+            img(src="./img/section_7.png?ts=" + ts)/
+            each url in ["y105_sh_rev_all_et", "y106_sh_rev_mainall_et", "y107_sh_rev_science_et", "y107_sh_rev_society_et"]
+                a.enter(target="_blank" href= ehanlin + "/type/ONLINE/id/"+url+"/SalesPlans.html")
         footer
-            img(src="./img/footer.png")/
-            a(target="_blank" href=ehanlin+"/106intro.html")
-        script(type="text/javascript" src="./js/index.js")
+            img(src="./img/single.png?ts=" + ts)/
+            a(target="_blank" href=ehanlin+"/type/ONLINE/category/【e名師】高中學測總複習/SalesPlans.html")
+
+            img(src="./img/footer.png?ts=" + ts)/
+            a(target="_blank" href=ehanlin+"/event/info/")
+
+        script(type="text/javascript" src="./js/index.js?ts=" + ts)

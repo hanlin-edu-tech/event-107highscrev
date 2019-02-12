@@ -133,33 +133,23 @@ body {
 
     .advantages {
         list-style-type: none;
-        margin-top: -265px;
         line-height: 125px;
+        padding: 0;
+        margin: 0;
 
         > .card {
-            width: 195px;
-            height: 195px;
+            width: 150px;
+            height: 100px;
             display: inline-block;
             position: relative;
-            transform: rotate(45deg);
-            margin-left: 80px;
+            margin: 10px;
 
             .cardRotateY();
 
             > img {
-                width: 195px;
-            }
-
-            &:first-child {
-                margin-left: 180px;
-            }
-
-            &:nth-child(3) {
-                margin-left: 180px;   
-            }
-
-            &:nth-child(3),&:nth-child(4),&:nth-child(5) {
-                margin-top: -100px;   
+                width: 150px;
+                border-radius: 10px;
+                box-shadow: 1px 3px 5px gray;
             }
         }
     }
@@ -170,15 +160,19 @@ body {
         }
 
         ul {
-            padding-left: 0px;
+            padding: 0;
             text-align: center;
             list-style-type: none;
+
+            &.teachers {
+                margin-left: -95px;
+            }
         }
 
         .teachers > li {
             position: relative;;
             display: inline-block;
-            width: 85px;
+            width: 75px;
             opacity: 1.0;
             transition: all 0.3s;
 
@@ -208,12 +202,13 @@ body {
             &:nth-child(2){ z-index: 80002;}
             &:nth-child(3){ z-index: 80003;}
             &:nth-child(4){ z-index: 80004;}
-            &:nth-child(5){z-index: 80010;}
-            &:nth-child(6){ z-index: 80009;}
-            &:nth-child(7){ z-index: 80008;}
-            &:nth-child(8){ z-index: 80007;}
-            &:nth-child(9){ z-index: 80006;}
-            &:nth-child(10){ z-index: 80005;}
+            &:nth-child(5){z-index: 80005;}
+            &:nth-child(6){ z-index: 80011;}
+            &:nth-child(7){ z-index: 80010;}
+            &:nth-child(8){ z-index: 80009;}
+            &:nth-child(9){ z-index: 80008;}
+            &:nth-child(10){ z-index: 80007;}
+            &:nth-child(11){ z-index: 80006;}
         }
 
         > div {
@@ -245,7 +240,7 @@ body {
                 }
                 &.right { 
                     float: right;
-                    margin-right: 380px; 
+                    margin-right: 310px;
                 }
             }
 
@@ -253,7 +248,7 @@ body {
 
         .teacher-infos > li {
             display: none;
-            &:nth-child(5) {
+            &:nth-child(6) {
                 display: block;
             }
             > img {
@@ -286,16 +281,16 @@ body {
             cursor: pointer;
 
             &:nth-child(2), &:nth-child(3){
-                top: 350px;
+                top: 800px;
             }
             &:nth-child(4), &:nth-child(5){
-                top: 665px;
+                top: 1500px;
             }
             &:nth-child(2), &:nth-child(4){
-                left: 50px;
+                left: 145px;
             }
             &:nth-child(3), &:nth-child(5){
-                left: 515px;
+                left: 615px;
             }
             
         }
@@ -334,9 +329,9 @@ body {
             display: inline-block;
             width: 239px;
             height: 54px;
-            top: -68px;
-            background-image: url(../img/more.png);
-            background-repeat: no-repeat;
+            margin-top: -40px;
+            bottom: 30px;
+            background: url(../img/more.png) no-repeat;
         }
     }
 

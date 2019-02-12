@@ -2453,16 +2453,16 @@ body .benefits > .card:hover > .back {
 }
 body .advantages {
   list-style-type: none;
-  margin-top: -265px;
   line-height: 125px;
+  padding: 0;
+  margin: 0;
 }
 body .advantages > .card {
-  width: 195px;
-  height: 195px;
+  width: 150px;
+  height: 100px;
   display: inline-block;
   position: relative;
-  transform: rotate(45deg);
-  margin-left: 80px;
+  margin: 10px;
 }
 body .advantages > .card > .front,
 body .advantages > .card > .back {
@@ -2485,31 +2485,25 @@ body .advantages > .card:hover > .back {
   transform: rotateY(0deg);;
 }
 body .advantages > .card > img {
-  width: 195px;
-}
-body .advantages > .card:first-child {
-  margin-left: 180px;
-}
-body .advantages > .card:nth-child(3) {
-  margin-left: 180px;
-}
-body .advantages > .card:nth-child(3),
-body .advantages > .card:nth-child(4),
-body .advantages > .card:nth-child(5) {
-  margin-top: -100px;
+  width: 150px;
+  border-radius: 10px;
+  box-shadow: 1px 3px 5px gray;
 }
 body #teachers input[name="teacher"] {
   display: none;
 }
 body #teachers ul {
-  padding-left: 0px;
+  padding: 0;
   text-align: center;
   list-style-type: none;
+}
+body #teachers ul.teachers {
+  margin-left: -95px;
 }
 body #teachers .teachers > li {
   position: relative;
   display: inline-block;
-  width: 85px;
+  width: 75px;
   opacity: 1.0;
   transition: all 0.3s;
 }
@@ -2545,22 +2539,25 @@ body #teachers .teachers > li:nth-child(4) {
   z-index: 80004;
 }
 body #teachers .teachers > li:nth-child(5) {
-  z-index: 80010;
+  z-index: 80005;
 }
 body #teachers .teachers > li:nth-child(6) {
-  z-index: 80009;
+  z-index: 80011;
 }
 body #teachers .teachers > li:nth-child(7) {
-  z-index: 80008;
+  z-index: 80010;
 }
 body #teachers .teachers > li:nth-child(8) {
-  z-index: 80007;
+  z-index: 80009;
 }
 body #teachers .teachers > li:nth-child(9) {
-  z-index: 80006;
+  z-index: 80008;
 }
 body #teachers .teachers > li:nth-child(10) {
-  z-index: 80005;
+  z-index: 80007;
+}
+body #teachers .teachers > li:nth-child(11) {
+  z-index: 80006;
 }
 body #teachers > div {
   position: relative;
@@ -2590,12 +2587,12 @@ body #teachers > div > button.left {
 }
 body #teachers > div > button.right {
   float: right;
-  margin-right: 380px;
+  margin-right: 310px;
 }
 body #teachers .teacher-infos > li {
   display: none;
 }
-body #teachers .teacher-infos > li:nth-child(5) {
+body #teachers .teacher-infos > li:nth-child(6) {
   display: block;
 }
 body #teachers .teacher-infos > li > img {
@@ -2645,19 +2642,19 @@ body #prices .enter {
 }
 body #prices .enter:nth-child(2),
 body #prices .enter:nth-child(3) {
-  top: 350px;
+  top: 800px;
 }
 body #prices .enter:nth-child(4),
 body #prices .enter:nth-child(5) {
-  top: 665px;
+  top: 1500px;
 }
 body #prices .enter:nth-child(2),
 body #prices .enter:nth-child(4) {
-  left: 50px;
+  left: 145px;
 }
 body #prices .enter:nth-child(3),
 body #prices .enter:nth-child(5) {
-  left: 515px;
+  left: 615px;
 }
 body #courses {
   position: relative;
@@ -2689,9 +2686,9 @@ body > footer > a {
   display: inline-block;
   width: 239px;
   height: 54px;
-  top: -68px;
-  background-image: url(../img/more.png);
-  background-repeat: no-repeat;
+  margin-top: -40px;
+  bottom: 30px;
+  background: url(../img/more.png) no-repeat;
 }
 body > #enter-alert {
   width: 0px;
