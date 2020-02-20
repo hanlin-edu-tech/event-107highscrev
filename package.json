@@ -8,7 +8,7 @@
     "url": "https://github.com/eHanlin/107highscrev.git"
   },
   "devDependencies": {
-    "jquery": "3.2.1",
+    "jquery": "3.4.0",
     "gulp": "3.9.1",
     "gulp-rename": "1.2.2",
     "gulp-template-util": "0.0.2",
