@@ -19,7 +19,7 @@
     "browserify": "14.4.0",
     "coffeeify": "2.1.0",
     "less": "2.7.2",
-    "pug": "2.0.0-rc.2"
+    "pug": "3.0.1"
   },
   "dependencies": {
     "font-awesome": "4.7.0",
