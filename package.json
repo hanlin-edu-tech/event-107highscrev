@@ -25,6 +25,9 @@
     "font-awesome": "4.7.0",
     "gulp-gcloud-publish": "^2.1.1"
   },
+  "overrides": {
+    "graceful-fs": "^4.2.11"
+  },
   "scripts": {
     "test": "echo website"
   }
