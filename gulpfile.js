@@ -12,6 +12,10 @@ var coffeeify = require('coffeeify');
 var less = require('less');
 var pug = require('pug');
 
+// Node 15 起未處理的 promise rejection 會終止程序，這裡維持 Node 7 的行為：只印警告、繼續執行
+process.on('unhandledRejection', function (reason) {
+    console.warn('UnhandledPromiseRejectionWarning:', reason);
+});
 
 const gcPub = require("gulp-gcloud-publish");
 const bucketNameForTest = "tutor-test-events";
